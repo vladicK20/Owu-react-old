@@ -1,8 +1,7 @@
 const App = () => {
     return (
         <div>
-            <App/>
-            sdf
+
         </div>
     );
 };
