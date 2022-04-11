@@ -1,4 +1,4 @@
-const baseURL = process.env.
+const baseURL = process.env.REACT_APP_APIURL
 
 export const urls = {
     users: './users',
