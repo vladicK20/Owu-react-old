@@ -1,5 +1,5 @@
 import css from './MainLayout.module.css'
-import {Link, Outlet, NavLink} from "react-router-dom"
+import {Outlet, NavLink} from "react-router-dom"
 
 const MainLayout = () => {
     return (
