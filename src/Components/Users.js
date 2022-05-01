@@ -1,19 +1,16 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {loadUsers} from "../redux/actions";
+import {loadUsers} from "../redux/actions.creator"
 
 const Users = () => {
-    let defaultRootState = useSelector(state => state.usersState);
+    let defaultRootState = useSelector(({usersState}) => usersState);
     let dispatch = useDispatch();
     console.log(defaultRootState)
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then((value) => value.json())
-            .then(users => {
-                loadUsers(users, dispatch)
-            })
+        dispatch(loadUsers())
     }, [])
+
     return (
         <div>
             {
